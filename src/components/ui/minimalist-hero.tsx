@@ -133,10 +133,10 @@ export const MinimalistHero = ({
                 <motion.img
                     src={imageSrc}
                     alt={imageAlt}
-                    className="h-auto w-32 sm:w-40 md:w-80 lg:w-96 object-contain select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
+                    className="h-auto w-32 sm:w-40 md:w-80 lg:w-[450px] object-contain select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
                     style={{ transformOrigin: 'center center' }}
                     initial={{ opacity: 0, y: 30, scale: 0.8 }}
-                    animate={{ opacity: 1, y: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, y: 0, scale: 1.2 }}
                     transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
                     onError={(e) => {
                     const target = e.target as HTMLImageElement;

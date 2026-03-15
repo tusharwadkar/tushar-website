@@ -7,8 +7,8 @@ const MinimalistHeroDemo = () => {
       logoText="Tushar Wadkar."
       mainText="Helping brands grow with modern web design and development. Creating digital experiences that are fast, scalable, and impactful."
       readMoreLink="#"
-      imageSrc="/image 13.webp"
-      imageAlt="A portrait of a person in a black turtleneck, in profile."
+      imageSrc="/my-profile.png"
+      imageAlt="Profile portrait of Tushar Wadkar"
       overlayText={{
         part1: 'Design.',
         part2: 'Develop.',
