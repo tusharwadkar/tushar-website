@@ -8,7 +8,7 @@ export function SplineSceneBasic() {
   return (
     <section className="py-24 px-4 sm:px-6 md:px-12 bg-background">
       <div className="mx-auto max-w-7xl">
-        <Card className="w-full min-h-[850px] md:h-[600px] bg-black/[0.96] relative overflow-hidden rounded-[3rem] border-zinc-800">
+        <Card className="w-full min-h-[900px] md:h-[600px] bg-black/[0.96] relative overflow-hidden rounded-[3rem] border-zinc-800">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="white"
@@ -26,8 +26,8 @@ export function SplineSceneBasic() {
               </p>
             </div>
 
-            {/* Right content */}
-            <div className="flex-1 relative min-h-[600px] md:min-h-full will-change-transform transform-gpu">
+            {/* Right content - Zoomed on mobile */}
+            <div className="flex-1 relative min-h-[700px] md:min-h-full will-change-transform transform-gpu scale-150 sm:scale-100 flex items-center justify-center overflow-hidden">
               <SplineScene 
                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                 className="w-full h-full"
