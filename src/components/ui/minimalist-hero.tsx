@@ -35,11 +35,12 @@ export const MinimalistHero = ({
   return (
     <div
       className={cn(
-        'relative flex min-h-screen h-[100dvh] w-full flex-col items-center justify-between overflow-hidden bg-background p-4 sm:p-6 font-sans md:p-12 pt-24 md:pt-32',
+        'relative flex min-h-screen h-auto md:h-[100dvh] w-full flex-col items-center justify-center overflow-hidden bg-background p-4 sm:p-6 font-sans md:p-12 pt-20 md:pt-32',
         className
       )}
     >
       {/* Sticky Header */}
+      {/* ... header remains the same ... */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/70 backdrop-blur-md will-change-transform transform-gpu">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 md:px-12">
           <motion.div
@@ -86,7 +87,7 @@ export const MinimalistHero = ({
         </div>
       </header>
 
-      <div className="relative my-2 sm:my-4 md:my-8 grid w-full max-w-7xl grid-cols-1 items-center gap-2 sm:gap-4 md:grid-cols-3 md:gap-8">
+      <div className="relative my-4 sm:my-8 md:my-10 grid w-full max-w-7xl grid-cols-1 items-center gap-8 md:grid-cols-3 md:gap-16">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -97,7 +98,7 @@ export const MinimalistHero = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="mx-auto max-w-[280px] text-[10px] sm:text-xs md:max-w-xs md:text-base leading-relaxed text-foreground/80 md:mx-0"
+            className="mx-auto max-w-[280px] text-xs sm:text-sm md:max-w-xs md:text-base leading-relaxed text-foreground/80 md:mx-0"
           >
             {mainText}
           </motion.p>
@@ -105,26 +106,26 @@ export const MinimalistHero = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="mt-3 sm:mt-4 md:mt-6 flex justify-center md:justify-start scale-[0.85] sm:scale-100"
+            className="mt-4 sm:mt-6 flex justify-center md:justify-start"
           >
             <FlowButton text="Read More" href={readMoreLink} />
           </motion.div>
         </motion.div>
 
-        <div className="relative order-1 md:order-2 flex justify-center items-center py-4 md:py-0">
+        <div className="relative order-1 md:order-2 flex justify-center items-center py-6 md:py-0">
             <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                className="absolute z-0 h-[150px] w-[150px] sm:h-[180px] sm:w-[180px] rounded-full bg-yellow-400 md:h-[350px] md:w-[350px] lg:h-[420px] lg:w-[420px] shadow-xl"
+                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                className="absolute z-0 h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] rounded-full bg-yellow-400 md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px] shadow-2xl"
             ></motion.div>
             
             <motion.div
                 animate={{
-                    y: [0, -10, 0],
+                    y: [0, -15, 0],
                 }}
                 transition={{
-                    duration: 6,
+                    duration: 5,
                     repeat: Infinity,
                     ease: "easeInOut"
                 }}
@@ -133,10 +134,10 @@ export const MinimalistHero = ({
                 <motion.img
                     src={imageSrc}
                     alt={imageAlt}
-                    className="h-auto w-32 sm:w-40 md:w-80 lg:w-[450px] object-contain select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+                    className="h-auto w-48 sm:w-64 md:w-96 lg:w-[500px] object-contain select-none drop-shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
                     style={{ transformOrigin: 'center center' }}
                     initial={{ opacity: 0, y: 30, scale: 0.8 }}
-                    animate={{ opacity: 1, y: 0, scale: 1.2 }}
+                    animate={{ opacity: 1, y: 0, scale: 1.3 }}
                     transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
                     onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -152,7 +153,7 @@ export const MinimalistHero = ({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: "circOut" }}
-            className="text-4xl sm:text-5xl font-black text-foreground md:text-7xl lg:text-8xl xl:text-9xl leading-[0.9] tracking-tighter"
+            className="text-5xl sm:text-6xl font-black text-foreground md:text-7xl lg:text-8xl xl:text-9xl leading-[0.85] tracking-tighter"
           >
             <span className="block">{overlayText.part1}</span>
             <motion.span
